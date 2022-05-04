@@ -14,7 +14,6 @@ class ProfileTab extends StatelessWidget {
     required this.lastName,
   }) : super(key: key);
   Future<void> _lunchURL() async {
-    //todo check this void return type it breaks the code
     if (await canLaunchUrl(webURL)) {
       if (!await launchUrl(
         webURL,
@@ -32,7 +31,6 @@ class ProfileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      //todo check if gesture dector will bring error
       onTap: _lunchURL,
       child: Container(
         height: 50,
@@ -46,6 +44,7 @@ class ProfileTab extends StatelessWidget {
                 child: Image.asset(
                   imgURL,
                   fit: BoxFit.cover,
+                  //todo edit this properites to get a better look
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -61,7 +60,7 @@ class ProfileTab extends StatelessWidget {
             SizedBox(height: 5),
             Text(
               lastName,
-              //todo check the error here or there
+
               maxLines: 1,
               style: TextStyle(
                 fontSize: 10,

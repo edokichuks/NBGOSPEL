@@ -7,7 +7,7 @@ class MainScreen extends StatelessWidget {
   final List<String> pic = [
     'assets/Apostle Arome Osayi.jpg',
     'assets/Apostle Edu Udechukwu.jpg',
-    'assets/Apostle Johnson Suleman.jpg',
+    'assets/Apostle Johnson Suleman 1.jpg',
     'assets/Apostle Joshua Selman.jpg',
     'assets/Apostle Michael Orokpo.jpg',
     'assets/Bro Gbile Akanni.jpg',
@@ -17,17 +17,19 @@ class MainScreen extends StatelessWidget {
     'assets/P. Daneil.jpg',
     'assets/Pastor Chingtok Ishaku.jpg',
     'assets/Pastor Chris Devin.jpg',
-    'assets/Pastor Chris Oyakhilome.jpg',
+    'assets/Pastor Chris Oyakhilome 2.jpg',
     'assets/Pastor David Ogbueli.jpg',
     'assets/Pastor Derick Prince.jpg',
     'assets/Pastor Femi Lazarus.jpg',
-    'assets/Pastor Paul Enenche.jpg',
+    'assets/Pastor Paul Enenche 2.jpg',
     'assets/Pastor W.F. Kumuyi.jpg',
     'assets/Prayer.jpg',
     'assets/Prophet Jesse Janfa.jpg',
     'assets/Reverend Gideon Odoma.jpg',
     'assets/Reverend Tolu Agboola.jpg',
     'assets/T.D. Jakes.jpg',
+    'assets/Pastor Jerry Eze.jpg',
+    'assets/Pastor Poju Oyemadu.jpg',
   ];
   final List<String> FirsName = [
     'Apostle Arome',
@@ -53,6 +55,8 @@ class MainScreen extends StatelessWidget {
     'Reverend Gideon',
     'Reverend Tolu',
     'Bishop T.D.',
+    'Pastor Jerry',
+    'Pastor Poju'
   ];
   final List<String> LastName = [
     'Osayi',
@@ -78,6 +82,8 @@ class MainScreen extends StatelessWidget {
     'Odoma',
     'Agboola',
     'Jakes',
+    'Eze',
+    'Oyemadu',
   ];
   final List<String> url = [
     'https://nbgospel.com/download-apostle-arome-osayi-messages-2021/',
@@ -103,14 +109,14 @@ class MainScreen extends StatelessWidget {
     'https://nbgospel.com/recent-mp3-download-all-rev-gideon-odoma-messages-here/',
     'https://nbgospel.com/download-all-reverend-tolu-agboola-messages/',
     'https://nbgospel.com/download-t-d-jakes-sermons-and-books/',
+    '',
+    '',
   ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        // left: 10,
-        // right: 10,
         top: 10,
       ),
       child: GridView.builder(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nbgospel/screen/main_screen.dart';
+import 'package:nbgospel/model/main_screen_data.dart';
 
 import 'drawer.dart';
 
@@ -18,6 +18,20 @@ class MainHome extends StatelessWidget {
             fontSize: 40,
           ),
         ),
+        // title: Center(
+        //   child: Container(
+        //     height: 40,
+        //     color: Colors.grey.shade800,
+        //     //todo change this colors
+        //     child: TextField(
+        //       decoration: InputDecoration(
+        //         border: InputBorder.none,
+        //         hintText: 'Search here on nbGospel',
+        //         icon: Icon(Icons.search),
+        //       ),
+        //     ),
+        //   ),
+        // ),
         centerTitle: true,
         elevation: 0,
         actions: [
@@ -93,27 +107,16 @@ class MainHome extends StatelessWidget {
             ),
           )
         ],
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(70),
-          child: Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: 50,
-              vertical: 10,
-            ),
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Search here on nbGospel',
-                icon: Icon(Icons.search),
-              ),
-            ),
-          ),
-        ),
+        // bottom: PreferredSize(
+        //   preferredSize: Size.fromHeight(30),
+        //   child: TextField(
+        //     decoration: InputDecoration(
+        //       border: InputBorder.none,
+        //       hintText: 'Search here on nbGospel',
+        //       icon: Icon(Icons.search),
+        //     ),
+        //   ),
+        // ),
       ),
       drawer: HomeDrawer(),
       body: MainScreen(),

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
 
-      // ThemeData(
+      //     ThemeData(
       //   primarySwatch: Colors.grey,
       // ),
       home: SplashScreen(),
