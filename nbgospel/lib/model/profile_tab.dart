@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:nbgospel/model/user_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ProfileTab extends StatelessWidget {
-  final String firstName;
-  final String lastName;
-  final String imgURL;
-  final Uri webURL;
+class ProfileTab extends StatefulWidget {
+  final UserModel user;
   const ProfileTab({
     Key? key,
-    required this.firstName,
-    required this.imgURL,
-    required this.webURL,
-    required this.lastName,
+    required this.user,
   }) : super(key: key);
+
+  @override
+  State<ProfileTab> createState() => _ProfileTabState();
+}
+
+class _ProfileTabState extends State<ProfileTab> {
   Future<void> _lunchURL() async {
-    if (await canLaunchUrl(webURL)) {
+    final webParse = Uri.parse(widget.user.url);
+    if (await canLaunchUrl(webParse)) {
       if (!await launchUrl(
-        webURL,
+        webParse,
         mode: LaunchMode.inAppWebView,
       )) {
-        print('inner statement ');
+        //print('inner statement ');
       }
 
-      print('lauched url');
+      // print('lauched url');
     } else {
-      throw "Could not launch $webURL";
+      throw "Could not launch $webParse";
     }
   }
 
@@ -42,16 +44,15 @@ class ProfileTab extends StatelessWidget {
             Expanded(
               child: ClipRRect(
                 child: Image.asset(
-                  imgURL,
+                  widget.user.pic,
                   fit: BoxFit.cover,
-                  //todo edit this properites to get a better look
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
             SizedBox(height: 5),
             Text(
-              firstName,
+              widget.user.firstName,
               maxLines: 1,
               style: TextStyle(
                 fontSize: 10,
@@ -59,13 +60,11 @@ class ProfileTab extends StatelessWidget {
             ),
             SizedBox(height: 5),
             Text(
-              lastName,
-
+              widget.user.lastName,
               maxLines: 1,
               style: TextStyle(
                 fontSize: 10,
               ),
-              //todo maybe add style
             ),
           ],
         ),
