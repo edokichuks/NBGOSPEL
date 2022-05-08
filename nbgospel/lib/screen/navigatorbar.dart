@@ -1,6 +1,7 @@
-import 'package:nbgospel/message/message.dart';
-import 'package:nbgospel/settings.dart';
+
 import 'package:flutter/material.dart';
+import 'package:nbgospel/screen/message.dart';
+import 'package:nbgospel/screen/settings.dart';
 
 class NavigatorBarPage extends StatefulWidget {
   const NavigatorBarPage({Key? key}) : super(key: key);

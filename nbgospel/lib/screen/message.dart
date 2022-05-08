@@ -1,5 +1,6 @@
-import 'package:nbgospel/message/messsge_widget.dart';
+
 import 'package:flutter/material.dart';
+import 'package:nbgospel/widgets/messsge_widget.dart';
 
 class Message extends StatefulWidget {
   const Message({Key? key}) : super(key: key);

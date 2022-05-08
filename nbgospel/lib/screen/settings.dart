@@ -1,6 +1,7 @@
-import 'package:nbgospel/aboutus.dart';
+
 import 'package:nbgospel/general.dart';
 import 'package:flutter/material.dart';
+import 'package:nbgospel/screen/aboutus.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
