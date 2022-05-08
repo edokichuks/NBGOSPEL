@@ -26,7 +26,7 @@ class _MessageState extends State<Message> {
         children: const [
           MessageBox(
               message: 'The Holy Spirit',
-              url: ImageIcon(AssetImage('images/holy.png'))),
+              url: ImageIcon(AssetImage('assets/images/holy.png'))),
           MessageBox(
               message: 'Marriage and Relationship',
               url: ImageIcon(AssetImage('images/relationship.png'))),

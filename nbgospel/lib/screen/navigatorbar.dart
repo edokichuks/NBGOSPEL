@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:nbgospel/screen/message.dart';
 import 'package:nbgospel/screen/settings.dart';
@@ -18,12 +17,12 @@ class _NavigatorBarPageState extends State<NavigatorBarPage> {
             body: ListView(
       children: [
         Container(
-          child: Image.asset('#'),
+          child: Image.asset('assets/NBG logo.jpg', fit: BoxFit.cover),
           //to add the logo for the nbgospel
           height: 150,
         ),
         Container(
-          color: Colors.black,
+          color: Colors.black54,
           child: Column(
             children: [
               buildListTile('Christain Articles', Icons.article, () {}),

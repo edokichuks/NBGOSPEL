@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nbgospel/data_list.dart';
 import 'package:nbgospel/model/profile_tab.dart';
 import 'package:nbgospel/model/user_model.dart';
+import 'package:nbgospel/screen/navigatorbar.dart';
 
 import 'drawer.dart';
 
@@ -225,7 +226,7 @@ class _MainHomeState extends State<MainHome> {
         //   ),
         // ),
       ),
-      drawer: HomeDrawer(),
+      drawer: NavigatorBarPage(),
       body: _isSearching && _searchedUsers.isEmpty
           ? Center(
               child: Column(
