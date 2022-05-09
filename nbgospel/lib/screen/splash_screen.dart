@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nbgospel/screen/main_home.dart';
 import 'package:nbgospel/screen/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen>
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (_) => OnBoardingScreen(),
+          builder: (_) => MainHome(),
         ),
       );
     });

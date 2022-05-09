@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:nbgospel/data_list.dart';
 import 'package:nbgospel/model/profile_tab.dart';
 import 'package:nbgospel/model/user_model.dart';
-import 'package:nbgospel/screen/navigatorbar.dart';
+import 'package:nbgospel/uka/aboutus.dart';
+import 'package:nbgospel/uka/general.dart';
+import 'package:nbgospel/uka/settings.dart';
 
 import 'drawer.dart';
 
@@ -140,71 +142,91 @@ class _MainHomeState extends State<MainHome> {
             child: PopupMenuButton(
               itemBuilder: (context) => [
                 PopupMenuItem(
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.settings,
-                        color: Colors.black54,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          'Settings',
-                          style: TextStyle(
-                            fontFamily: 'Signatra',
-                            fontSize: 30,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Settings(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: const [
+                        Icon(
+                          Icons.settings,
+                          color: Colors.black54,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'Settings',
+                            style: TextStyle(
+                              fontFamily: 'Signatra',
+                              fontSize: 30,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 PopupMenuItem(
-                  child: Row(
-                    children: [
-                      IconButton(
-                        icon: Icon(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => General(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Icon(
                           Icons.color_lens_outlined,
                           color: Colors.black54,
                         ),
-                        onPressed: () {
-                          setState(() {
-                            isSwitched = !isSwitched;
-                          });
-                        },
-                        padding: EdgeInsets.zero,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          'Change Theme',
-                          style: TextStyle(
-                            fontFamily: 'Signatra',
-                            fontSize: 30,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'Change Theme',
+                            style: TextStyle(
+                              fontFamily: 'Signatra',
+                              fontSize: 30,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 PopupMenuItem(
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.my_library_books_rounded,
-                        color: Colors.black54,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          'About Us',
-                          style: TextStyle(
-                            fontFamily: 'Signatra',
-                            fontSize: 30,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (_) {
+                        return AboutUs();
+                      }));
+                    },
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.my_library_books_rounded,
+                          color: Colors.black54,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'About Us',
+                            style: TextStyle(
+                              fontFamily: 'Signatra',
+                              fontSize: 30,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -215,18 +237,8 @@ class _MainHomeState extends State<MainHome> {
             ),
           ),
         ],
-        // bottom: PreferredSize(
-        //   preferredSize: Size.fromHeight(30),
-        //   child: TextField(
-        //     decoration: InputDecoration(
-        //       border: InputBorder.none,
-        //       hintText: 'Search here on nbGospel',
-        //       icon: Icon(Icons.search),
-        //     ),
-        //   ),
-        // ),
       ),
-      drawer: NavigatorBarPage(),
+      drawer: HomeDrawer(),
       body: _isSearching && _searchedUsers.isEmpty
           ? Center(
               child: Column(
