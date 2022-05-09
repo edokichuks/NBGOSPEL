@@ -8,6 +8,14 @@ class General extends StatefulWidget {
 }
 
 class _GeneralState extends State<General> {
+  bool _iconBool = false;
+  IconData _iconLight = Icons.wb_sunny;
+  IconData _iconDark = Icons.nights_stay;
+
+  ThemeData _lightMode = ThemeData.light();
+
+  ThemeData _darkMode = ThemeData.dark();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,34 +27,29 @@ class _GeneralState extends State<General> {
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: false,
-          backgroundColor:  Colors.grey.shade800,
+          backgroundColor: Colors.grey.shade800,
           elevation: 0,
         ),
         body: ListView(
           children: [
-            buildList('Switch Mode', () {}, Icons.light_mode),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Text(
+                  'Switch Mode',
+                  style: TextStyle(color: Colors.white),
+                ),
+                IconButton(
+                    onPressed: () {
+                      setState(() {
+                        _iconBool = !_iconBool;
+                      });
+                    },
+                    color: Colors.white,
+                    icon: Icon(_iconBool ? _iconLight : _iconDark)),
+              ],
+            )
           ],
         ));
   }
-}
-
-Widget buildList(String text, VoidCallback click, IconData icon) {
-  return ListTile(
-    tileColor:  Colors.grey.shade900,
-    leading: Icon(
-      icon,
-      color: Colors.white,
-    ),
-    title: Text(
-      text,
-      style: const TextStyle(color: Colors.white),
-    ),
-    contentPadding: const EdgeInsets.all(10),
-    hoverColor: Colors.grey,
-    onTap: click,
-    trailing: const Icon(
-      Icons.radio_button_checked,
-      color: Colors.white,
-    ),
-  );
 }
