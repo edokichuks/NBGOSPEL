@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:nbgospel/screen/on_boarding_screen.dart';
 import 'package:nbgospel/screen/splash_screen.dart';
+import 'package:nbgospel/ui/global/theme/bloc/bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 int? initScreen = null;

@@ -1,22 +1,27 @@
-
-import 'package:nbgospel/general.dart';
 import 'package:flutter/material.dart';
-import 'package:nbgospel/screen/aboutus.dart';
 
-class Settings extends StatelessWidget {
+import 'aboutus.dart';
+import 'general.dart';
+
+class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
   @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey.shade900,
         appBar: AppBar(
           leading: BackButton(color: Colors.white),
           title: const Text(
             'Settings',
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.grey.shade800,
           elevation: 0,
         ),
         body: ListView(
@@ -36,7 +41,7 @@ class Settings extends StatelessWidget {
 
 Widget buildList(String text, VoidCallback click, IconData icon) {
   return ListTile(
-    tileColor: Colors.black,
+    tileColor: Colors.grey.shade900,
     leading: Icon(
       icon,
       color: Colors.white,
@@ -46,7 +51,7 @@ Widget buildList(String text, VoidCallback click, IconData icon) {
       style: const TextStyle(color: Colors.white),
     ),
     contentPadding: const EdgeInsets.all(10),
-    hoverColor: Colors.grey,
+    hoverColor: Colors.grey.shade300,
     onTap: click,
     trailing: const Icon(
       Icons.arrow_forward_ios_outlined,

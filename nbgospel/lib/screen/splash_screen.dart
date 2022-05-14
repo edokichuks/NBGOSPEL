@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nbgospel/screen/main_home.dart';
-import 'package:nbgospel/screen/on_boarding_screen.dart';
+
+import 'main_home.dart';
+
+
 
 class SplashScreen extends StatefulWidget {
   @override

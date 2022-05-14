@@ -29,8 +29,6 @@ const List<UserModel> originalList = [
     fullName: 'Follow our facebook page',
     url: 'https://www.facebook.com/Nbgospel/ ',
   ),
-
-  //todo 0
   UserModel(
     pic: 'assets/Apostle Arome Osayi.jpg',
     firstName: 'Apostle Arome',
@@ -73,7 +71,14 @@ const List<UserModel> originalList = [
     fullName: 'Bro Gbile Akanni',
     url: 'https://nbgospel.com/download-bro-gbile-akanni-messages/',
   ),
-  /////todo 1
+  UserModel(
+    pic: 'assets/nbg1.jpg',
+    firstName: 'Written Sermons',
+    lastName: '',
+    fullName: 'Written Sermons',
+    url:
+        'https://nbgospel.com/short-free-sermons-and-sermon-outlines-for-pastors/',
+  ),
   UserModel(
     pic: 'assets/Dr John Akpami.jpg',
     firstName: 'Rev John',
@@ -83,9 +88,9 @@ const List<UserModel> originalList = [
   ),
   UserModel(
     pic: 'assets/Healing.jpg',
-    firstName: 'Healing',
-    lastName: '',
-    fullName: 'Healing',
+    firstName: 'Messages on',
+    lastName: 'Healing',
+    fullName: 'Messages on Healing',
     url: 'https://nbgospel.com/messages-on-healing-and-deliverance/',
   ),
   UserModel(
@@ -98,9 +103,9 @@ const List<UserModel> originalList = [
   UserModel(
     pic: 'assets/P. Daneil.jpg',
     firstName: 'Pastor Daniel',
-    lastName: 'Ishaku',
-    fullName: 'Pastor Daniel Ishaku',
-    url: 'https://nbgospel.com/',
+    lastName: 'Olawande',
+    fullName: 'Pastor Daniel Olawande',
+    url: 'https://nbgospel.com/pastor-daniel-olawande-messages/',
   ),
   UserModel(
     pic: 'assets/Pastor Chingtok Ishaku.jpg',
@@ -121,7 +126,7 @@ const List<UserModel> originalList = [
     firstName: 'Pastor Chris',
     lastName: 'Devin',
     fullName: 'Pastor Chris Devin',
-    url: 'https://nbgospel.com/',
+    url: 'https://nbgospel.com/chris-delvan-gwamna-messages-and-songs/',
   ),
   UserModel(
     pic: 'assets/Pastor Chris Oyakhilome 2.jpg',
@@ -138,6 +143,14 @@ const List<UserModel> originalList = [
     url: 'https://nbgospel.com/download-pastor-david-ogbueli-messages/',
   ),
   UserModel(
+    pic: 'assets/Marriage.jpg',
+    firstName: 'Messages on',
+    lastName: 'Marriage',
+    fullName: 'Messages on marriage',
+    url:
+        'https://nbgospel.com/download-audio-messages-on-marriage-and-e-books/',
+  ),
+  UserModel(
     pic: 'assets/Pastor Derick Prince.jpg',
     firstName: 'Pastor Derick',
     lastName: 'Prince',
@@ -152,9 +165,6 @@ const List<UserModel> originalList = [
     fullName: 'Pastor Femi Lazarus',
     url: 'https://nbgospel.com/download-pastor-femi-lazarus-messages/',
   ),
-
-  ///todo 2
-
   UserModel(
     pic: 'assets/Pastor Paul Enenche 2.jpg',
     firstName: 'Pastor Paul',
@@ -172,9 +182,9 @@ const List<UserModel> originalList = [
   ),
   UserModel(
     pic: 'assets/Prayer.jpg',
-    firstName: 'Prayer',
-    lastName: '',
-    fullName: 'Prayer',
+    firstName: 'Messages on',
+    lastName: 'Prayer',
+    fullName: 'Messages on Prayer',
     url:
         'https://nbgospel.com/download-audio-messages-on-prayer-and-spiritual-gifts/',
   ),
@@ -201,13 +211,20 @@ const List<UserModel> originalList = [
     url: 'https://nbgospel.com/download-all-reverend-tolu-agboola-messages/',
   ),
   UserModel(
+    pic: 'assets/Pastor Paul Adefarasin.jpg',
+    firstName: 'Pastor Paul',
+    lastName: 'Adefarasin',
+    fullName: 'Pastor Paul Adefarasin',
+    url:
+        'https://nbgospel.com/download-derek-prince-sermons-audio-and-book-collections/',
+  ),
+  UserModel(
     pic: 'assets/T.D. Jakes.jpg',
     firstName: 'Bishop T.D.',
     lastName: 'Jakes',
     fullName: 'Bishop T.D. Jakes',
     url: 'https://nbgospel.com/download-t-d-jakes-sermons-and-books/',
   ),
-
   UserModel(
     pic: 'assets/Pastor Jerry Eze.jpg',
     firstName: 'Pastor Jerry',

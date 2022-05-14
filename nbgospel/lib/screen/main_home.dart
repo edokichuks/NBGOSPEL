@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nbgospel/data_list.dart';
-import 'package:nbgospel/model/profile_tab.dart';
-import 'package:nbgospel/model/user_model.dart';
-import 'package:nbgospel/uka/aboutus.dart';
-import 'package:nbgospel/uka/general.dart';
-import 'package:nbgospel/uka/settings.dart';
-
+import 'package:nbgospel/model/model.dart';
+import 'package:nbgospel/screen/screen.dart';
 import 'drawer.dart';
+import 'general.dart';
+import 'settings.dart';
 
 class MainHome extends StatefulWidget {
   const MainHome({
@@ -69,7 +67,7 @@ class _MainHomeState extends State<MainHome> {
     return Scaffold(
       appBar: AppBar(
         title: isClicked
-            ? Text(
+            ? const Text(
                 'NBGOSPEL',
                 style: TextStyle(
                   fontFamily: 'Signatra',
@@ -182,7 +180,7 @@ class _MainHomeState extends State<MainHome> {
                       );
                     },
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.color_lens_outlined,
                           color: Colors.black54,
@@ -210,7 +208,7 @@ class _MainHomeState extends State<MainHome> {
                       }));
                     },
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.my_library_books_rounded,
                           color: Colors.black54,
