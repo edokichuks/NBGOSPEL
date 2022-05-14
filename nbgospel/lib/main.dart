@@ -15,31 +15,14 @@ Future<void> main() async {
   runApp(MyApp());
 }
 
-// This widget is the root of your application.
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  bool _iconBool = true;
-  //just change here to fasle and true everything works fine
-  IconData _iconLight = Icons.wb_sunny;
-  IconData _iconDark = Icons.nights_stay;
-
-  ThemeData _lightMode = ThemeData.light();
-
-  ThemeData _darkMode = ThemeData.dark();
-
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'NBgospel',
       debugShowCheckedModeBanner: false,
-      theme: _iconBool ? _darkMode : _lightMode,
+      theme: ThemeData.dark(),
 
       //     ThemeData(
       //   primarySwatch: Colors.grey,

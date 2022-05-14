@@ -22,7 +22,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
             Container(
               child: Image.asset(
                 'assets/nbgospel.jpg',
-                fit: BoxFit.fill,
+                fit: BoxFit.contain,
               ),
               height: 150,
             ),
