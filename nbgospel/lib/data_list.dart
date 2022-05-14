@@ -20,7 +20,7 @@ const List<UserModel> originalList = [
     firstName: 'Join Our',
     lastName: 'Telegram Channel',
     fullName: 'Join our telegram channel',
-    url: 'https://t.me/NBospel',
+    url: 'https://t.me/+VhvQZiCXWlAIbu3p',
   ),
   UserModel(
     pic: 'assets/facebook.jpg',
@@ -70,14 +70,6 @@ const List<UserModel> originalList = [
     lastName: 'Akanni',
     fullName: 'Bro Gbile Akanni',
     url: 'https://nbgospel.com/download-bro-gbile-akanni-messages/',
-  ),
-  UserModel(
-    pic: 'assets/nbg1.jpg',
-    firstName: 'Written Sermons',
-    lastName: '',
-    fullName: 'Written Sermons',
-    url:
-        'https://nbgospel.com/short-free-sermons-and-sermon-outlines-for-pastors/',
   ),
   UserModel(
     pic: 'assets/Dr John Akpami.jpg',
@@ -226,6 +218,14 @@ const List<UserModel> originalList = [
     url: 'https://nbgospel.com/download-t-d-jakes-sermons-and-books/',
   ),
   UserModel(
+    pic: 'assets/ngb1.jpg',
+    firstName: 'Written Sermons',
+    lastName: '',
+    fullName: 'Written Sermons',
+    url:
+        'https://nbgospel.com/short-free-sermons-and-sermon-outlines-for-pastors/',
+  ),
+  UserModel(
     pic: 'assets/Pastor Jerry Eze.jpg',
     firstName: 'Pastor Jerry',
     lastName: 'Eze',
@@ -244,6 +244,7 @@ const List<UserModel> originalList = [
     firstName: 'REPORT AN',
     lastName: 'ERROR',
     fullName: 'Report an Error',
-    url: 'https://wa.me/qr/KDHE2Y223QWCC1',
+    url:
+        'https://docs.google.com/forms/d/e/1FAIpQLScP9Z7PXHypye0Qdo1rY48JUo3VRMJ-tRExKM-cbGor1cCGNg/viewform?usp=sf_link',
   ),
 ];

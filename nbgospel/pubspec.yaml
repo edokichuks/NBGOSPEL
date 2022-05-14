@@ -42,9 +42,9 @@ dependencies:
   equatable: ^2.0.3
 
 flutter_icons:
-  image_path: "assets/NBG logo.jpg"
+  image_path: "assets/ngb1.jpg"
   andriod: true
-  ios: true
+  ios: false
 
 dev_dependencies:
   flutter_test:

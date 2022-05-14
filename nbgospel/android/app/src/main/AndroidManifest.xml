@@ -9,7 +9,7 @@
     </queries>
 
     <application
-        android:label="nbgospel"
+        android:label="NBGospel"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -48,4 +48,5 @@
 
 
    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

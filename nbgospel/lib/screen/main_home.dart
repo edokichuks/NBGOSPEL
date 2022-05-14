@@ -33,7 +33,8 @@ class _MainHomeState extends State<MainHome> {
 
       for (int i = 0; i < originalList.length; i++) {
         final singleItem = originalList[i];
-        if (singleItem.fullName.toLowerCase().contains(searchQuery)) {
+        if (singleItem.fullName.toLowerCase().contains(searchQuery) ||
+            singleItem.lastName.toLowerCase().contains(searchQuery)) {
           tempList.add(singleItem);
         }
       }
@@ -77,7 +78,6 @@ class _MainHomeState extends State<MainHome> {
             : Container(
                 height: 35,
                 color: Colors.grey.shade600,
-                //todo change this colors
                 child: Row(
                   children: [
                     Flexible(
@@ -122,11 +122,14 @@ class _MainHomeState extends State<MainHome> {
         elevation: 0,
         actions: [
           Visibility(
-            visible: isClicked,
             child: IconButton(
               onPressed: () {
                 setState(() {
                   isClicked = !isClicked;
+                  if (_textEditingController.text.isNotEmpty) {
+                    //todo
+                    isClicked = true;
+                  }
                 });
               },
               icon: Icon(
@@ -134,6 +137,7 @@ class _MainHomeState extends State<MainHome> {
                 color: Colors.grey.shade700,
               ),
             ),
+            visible: isClicked,
           ),
           Padding(
             padding: const EdgeInsets.only(right: 4),

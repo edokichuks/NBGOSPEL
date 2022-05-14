@@ -32,11 +32,7 @@ class _AboutUsState extends State<AboutUs> {
                 if (!await launchUrl(
                   webParse,
                   mode: LaunchMode.inAppWebView,
-                )) {
-                  //print('inner statement ');
-                }
-
-                // print('lauched url');
+                )) {}
               } else {
                 throw "Could not launch $webParse";
               }
@@ -66,11 +62,7 @@ class _AboutUsState extends State<AboutUs> {
                 if (!await launchUrl(
                   webParse,
                   mode: LaunchMode.inAppWebView,
-                )) {
-                  //print('inner statement ');
-                }
-
-                // print('lauched url');
+                )) {}
               } else {
                 throw "Could not launch $webParse";
               }
