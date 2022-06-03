@@ -23,7 +23,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   ];
   final List<Color> colors = [
     Colors.grey.shade400,
-    Colors.amber,
+    Colors.amber.shade700,
     Colors.brown.shade700,
   ];
   final List<String> quoteImg = [

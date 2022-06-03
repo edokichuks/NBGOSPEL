@@ -60,8 +60,8 @@ const List<UserModel> originalList = [
   UserModel(
     pic: 'assets/Apostle Michael Orokpo.jpg',
     firstName: 'Apostle Michael',
-    lastName: 'Udechukwu',
-    fullName: 'Apostle Michael Udechukwu',
+    lastName: 'Orokpo',
+    fullName: 'Apostle Michael Orokpo',
     url: 'https://nbgospel.com/download-apostle-michael-orokpo-messages-mp3/',
   ),
   UserModel(
@@ -114,10 +114,10 @@ const List<UserModel> originalList = [
     url: 'https://nbgospel.com/short-inspirational-gospel-quotes-for-the-day/',
   ),
   UserModel(
-    pic: 'assets/Pastor Chris Devin.jpg',
+    pic: 'assets/Pastor Chris Devan.jpg',
     firstName: 'Pastor Chris',
-    lastName: 'Devin',
-    fullName: 'Pastor Chris Devin',
+    lastName: 'Delvan',
+    fullName: 'Pastor Chris Delvan',
     url: 'https://nbgospel.com/chris-delvan-gwamna-messages-and-songs/',
   ),
   UserModel(

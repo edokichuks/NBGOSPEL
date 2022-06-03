@@ -1,16 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'main_home.dart';
 
-
-
-class SplashScreen extends StatefulWidget {
+class splashScreen extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _splashScreenState createState() => _splashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
+class _splashScreenState extends State<splashScreen>
     with TickerProviderStateMixin {
   @override
   void initState() {

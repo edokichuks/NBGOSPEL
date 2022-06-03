@@ -86,6 +86,9 @@ class _MainHomeState extends State<MainHome> {
                         //autofocus: true,
                         cursorColor: Colors.grey.shade800,
 
+                        /// from fooderlich....smiles todo
+                        textInputAction: TextInputAction.done,
+
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           enabledBorder: InputBorder.none,
@@ -109,6 +112,13 @@ class _MainHomeState extends State<MainHome> {
                             _textEditingController.text = '';
                           },
                         );
+
+                        ///from fooderlich todo
+                        final currentFocus = FocusScope.of(context);
+
+                        if (!currentFocus.hasPrimaryFocus) {
+                          currentFocus.unfocus();
+                        }
                       },
                       child: Icon(
                         Icons.close_rounded,
@@ -127,10 +137,13 @@ class _MainHomeState extends State<MainHome> {
                 setState(() {
                   isClicked = !isClicked;
                   if (_textEditingController.text.isNotEmpty) {
-                    //todo
                     isClicked = true;
                   }
                 });
+                final currentFocus = FocusScope.of(context);
+                if (!currentFocus.hasPrimaryFocus) {
+                  currentFocus.unfocus();
+                }
               },
               icon: Icon(
                 Icons.search,
