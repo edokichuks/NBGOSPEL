@@ -1,4 +1,9 @@
-export 'aboutus.dart';
+export 'about_us.dart';
 export 'drawer.dart';
 export 'on_boarding_screen.dart';
 export 'splash_screen.dart';
+export 'general.dart';
+export 'about_us.dart';
+export 'settings.dart';
+export 'main_home.dart';
+export 'package:nbgospel/message_list.dart';

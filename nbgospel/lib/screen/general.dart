@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../theme_app/theme_app.dart';
+import 'package:provider/provider.dart';
 
 class General extends StatefulWidget {
   const General({Key? key}) : super(key: key);
@@ -10,55 +12,62 @@ class General extends StatefulWidget {
 class _GeneralState extends State<General> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey.shade900,
-      appBar: AppBar(
-        leading: BackButton(color: Colors.white),
-        title: const Text(
-          'General',
-          style: TextStyle(color: Colors.white),
+    return Consumer(builder: (context, ThemeModel themeNotifier, child) {
+      return Scaffold(
+        backgroundColor:
+            themeNotifier.isDark ? Colors.grey.shade900 : Colors.grey.shade200,
+        appBar: AppBar(
+          leading: BackButton(
+            color: themeNotifier.isDark
+                ? Colors.grey.shade200
+                : Colors.grey.shade900,
+          ),
+          title: Text(
+            'General',
+            style: TextStyle(
+              color: themeNotifier.isDark
+                  ? Colors.grey.shade200
+                  : Colors.grey.shade900,
+            ),
+          ),
+          centerTitle: false,
+          backgroundColor: themeNotifier.isDark
+              ? Colors.grey.shade900
+              : Colors.grey.shade200,
+          elevation: 4,
         ),
-        centerTitle: false,
-        backgroundColor: Colors.grey.shade800,
-        elevation: 0,
-      ),
-      body: ListView(
-        children: [
-          buildList('Switch Mode', () {
-            // Navigate to the PreferencePage
-            // Navigator.of(context).push(MaterialPageRoute(
-            //   builder: (context) => PreferencePage(),
-            // ));
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Coming Soon'),
-                backgroundColor: Colors.grey,
+        body: ListView(
+          children: [
+            ListTile(
+              leading: Icon(
+                Icons.light_mode,
+                color: themeNotifier.isDark
+                    ? Colors.grey.shade200
+                    : Colors.grey.shade900,
               ),
-            );
-          }, Icons.light_mode),
-        ],
-      ),
-    );
+              title: Text(
+                'Switch Theme',
+                style: TextStyle(
+                  color: themeNotifier.isDark
+                      ? Colors.grey.shade200
+                      : Colors.grey.shade900,
+                ),
+              ),
+              contentPadding: const EdgeInsets.all(10),
+              hoverColor: Colors.grey,
+              onTap: () {
+                themeNotifier.isDark = !themeNotifier.isDark;
+              },
+              trailing: Icon(
+                Icons.radio_button_checked,
+                color: themeNotifier.isDark
+                    ? Colors.grey.shade200
+                    : Colors.grey.shade900,
+              ),
+            ),
+          ],
+        ),
+      );
+    });
   }
-}
-
-Widget buildList(String text, VoidCallback click, IconData icon) {
-  return ListTile(
-    tileColor: Colors.grey.shade900,
-    leading: Icon(
-      icon,
-      color: Colors.white,
-    ),
-    title: Text(
-      text,
-      style: const TextStyle(color: Colors.white),
-    ),
-    contentPadding: const EdgeInsets.all(10),
-    hoverColor: Colors.grey,
-    onTap: click,
-    trailing: const Icon(
-      Icons.radio_button_checked,
-      color: Colors.white,
-    ),
-  );
 }

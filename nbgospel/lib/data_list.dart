@@ -20,7 +20,7 @@ const List<UserModel> originalList = [
     firstName: 'Join Our',
     lastName: 'Telegram Channel',
     fullName: 'Join our telegram channel',
-    url: 'https://t.me/+VhvQZiCXWlAIbu3p',
+    url: 'https://nbgospel.com/whatapp-group-links/',
   ),
   UserModel(
     pic: 'assets/facebook.jpg',
@@ -114,7 +114,7 @@ const List<UserModel> originalList = [
     url: 'https://nbgospel.com/short-inspirational-gospel-quotes-for-the-day/',
   ),
   UserModel(
-    pic: 'assets/Pastor Chris Devan.jpg',
+    pic: 'assets/Pastor Chris Devin.jpg',
     firstName: 'Pastor Chris',
     lastName: 'Delvan',
     fullName: 'Pastor Chris Delvan',
@@ -133,6 +133,34 @@ const List<UserModel> originalList = [
     lastName: 'Ogbueli',
     fullName: 'Pastor David Ogbueli',
     url: 'https://nbgospel.com/download-pastor-david-ogbueli-messages/',
+  ),
+  UserModel(
+    pic: 'assets/Prophet Isah El Buba2.jpg',
+    firstName: 'Prophet Isah',
+    lastName: 'El Buba',
+    fullName: 'Prophet Isah El Buba',
+    url: 'https://nbgospel.com/prophet-isah-el-buba-messages/',
+  ),
+  UserModel(
+    pic: 'assets/Pastor E.A Adeboye.jpg',
+    firstName: 'Pastor E.A',
+    lastName: 'Adeboye',
+    fullName: 'Pastor E.A Adeboye',
+    url: 'https://nbgospel.com/pastor-ea-adeboye-messages/',
+  ),
+  UserModel(
+    pic: 'assets/Bishop David Oyedepo.jpg',
+    firstName: 'Bishop David',
+    lastName: 'Oyedepo',
+    fullName: 'Bishop David oyedepo',
+    url: 'https://nbgospel.com/bishop-david-oyedepo-messages/',
+  ),
+  UserModel(
+    pic: 'assets/Pastor Mildred Okonkwo.jpg',
+    firstName: 'Pastor Mildred',
+    lastName: 'Okonkwo',
+    fullName: 'Pastor Mildred Okonkwo',
+    url: 'https://nbgospel.com/pastor-mildred-okonkwo-messages-on-marriage/',
   ),
   UserModel(
     pic: 'assets/Marriage.jpg',

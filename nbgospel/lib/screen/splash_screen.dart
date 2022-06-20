@@ -2,23 +2,25 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'main_home.dart';
 
-class splashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
-  _splashScreenState createState() => _splashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _splashScreenState extends State<splashScreen>
+class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   @override
   void initState() {
     upNext();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: const Duration(seconds: 2),
     )..forward();
     animation = CurvedAnimation(
       parent: controller,
-      curve: Curves.fastLinearToSlowEaseIn,
+      curve: Curves.linear,
     );
 
     controller.addListener(() {
@@ -28,12 +30,19 @@ class _splashScreenState extends State<splashScreen>
     super.initState();
   }
 
+  @override
+  void dispose() {
+    controller.dispose();
+
+    super.dispose();
+  }
+
   void upNext() {
-    Future.delayed(const Duration(seconds: 7), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (_) => MainHome(),
+          builder: (_) => const MainHome(),
         ),
       );
     });
@@ -49,17 +58,6 @@ class _splashScreenState extends State<splashScreen>
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.3),
-          // gradient: LinearGradient(
-          //   colors: [Colors.grey, Colors.brown, Colors.deepOrange],
-          //
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          // ),
-
-          // image: DecorationImage(
-          //   image: AssetImage('assets/NBG logo.jpg'),
-          //   fit: BoxFit.contain,
-          // ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +65,7 @@ class _splashScreenState extends State<splashScreen>
             ScaleTransition(
               scale: controller,
               child: const CircleAvatar(
-                radius: 100,
+                radius: 80,
                 backgroundImage: AssetImage(
                   'assets/NBG logo.jpg',
                 ),

@@ -23,8 +23,6 @@ class _ProfileTabState extends State<ProfileTab> {
       )) {
         //print('inner statement ');
       }
-
-      // print('lauched url');
     } else {
       throw "Could not launch $webParse";
     }
@@ -37,7 +35,7 @@ class _ProfileTabState extends State<ProfileTab> {
       child: Container(
         height: 50,
         width: 50,
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -50,19 +48,19 @@ class _ProfileTabState extends State<ProfileTab> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               widget.user.firstName,
               maxLines: 1,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 10,
               ),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               widget.user.lastName,
               maxLines: 1,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 10,
               ),
             ),

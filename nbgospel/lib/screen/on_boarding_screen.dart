@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
-
 import 'main_home.dart';
 
 class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({Key? key}) : super(key: key);
+
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
@@ -14,24 +15,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final List<String> titles = [
     'Welcome',
     'Welcome',
-    'Welcome',
   ];
   final List<String> subTitles = [
     'The fear of God is the beginning of wisdom',
     'Through wisdom comes understanding',
-    'And understanding from the fear of God'
   ];
   final List<Color> colors = [
     Colors.grey.shade400,
-    Colors.amber.shade700,
-    Colors.brown.shade700,
+    Colors.brown.shade400,
   ];
   final List<String> quoteImg = [
-    'assets/Quote1.jpg',
-    'assets/Quote2.jpg',
-    'assets/Quote3.jpg'
+    'assets/Quote 2.jpg',
+    'assets/Quote3.jpg',
   ];
-  SwiperController _controller = SwiperController();
+  final SwiperController _controller = SwiperController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,13 +45,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             controller: _controller,
             pagination: SwiperPagination(
               builder: RectSwiperPaginationBuilder(
-                activeColor: Colors.red,
-                size: Size(10, 15),
-                activeSize: Size(10, 25),
-                color: Colors.grey.shade700,
+                activeColor: Colors.deepOrange,
+                size: const Size(10, 15),
+                activeSize: const Size(10, 25),
+                color: Colors.grey.shade900,
               ),
             ),
-            itemCount: 3,
+            itemCount: 2,
             itemBuilder: (context, index) {
               return IntroItem(
                 title: titles[index],
@@ -67,13 +64,16 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           Align(
             alignment: Alignment.bottomLeft,
             child: FlatButton(
-              child: Text('Skip'),
+              child: const Text(
+                'Skip',
+                style: TextStyle(color: Colors.deepOrange),
+              ),
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (_) {
-                      return MainHome();
+                      return const MainHome();
                     },
                   ),
                 );
@@ -83,17 +83,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           Align(
             alignment: Alignment.bottomRight,
             child: IconButton(
-              icon:
-                  Icon(_currentIndex == 2 ? Icons.check : Icons.arrow_forward),
+              icon: Icon(
+                _currentIndex == 1 ? Icons.check : Icons.arrow_forward,
+                color: Colors.deepOrange,
+              ),
               onPressed: () {
-                if (_currentIndex != 2) {
+                if (_currentIndex != 1) {
                   _controller.next();
                 } else {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (_) {
-                        return MainHome();
+                        return const MainHome();
                       },
                     ),
                   );
@@ -109,15 +111,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
 class IntroItem extends StatelessWidget {
   final String title;
-  final String? subtitle; //todo check this line of code
+  final String? subtitle;
   final Color? bg;
   final String imgUrl;
 
-  IntroItem(
-      {required this.title,
+  const IntroItem(
+      {Key? key,
+      required this.title,
       required this.bg,
       required this.subtitle,
-      required this.imgUrl});
+      required this.imgUrl})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -125,37 +129,37 @@ class IntroItem extends StatelessWidget {
       color: bg ?? Theme.of(context).primaryColor,
       child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 35,
                   color: Colors.white,
                 ),
               ),
               if (subtitle != null) ...[
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   subtitle!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 24.0,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ],
-              SizedBox(
+              const SizedBox(
                 height: 40.0,
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(bottom: 70),
+                  margin: const EdgeInsets.only(bottom: 70),
                   width: double.infinity,
                   height: double.infinity,
                   child: ClipRRect(

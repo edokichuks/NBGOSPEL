@@ -1,37 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nbgospel/screen/on_boarding_screen.dart';
 import 'package:nbgospel/screen/splash_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-int? initScreen = null;
+import 'theme_app/theme_model.dart';
+
+int? initScreen;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences preferences = await SharedPreferences.getInstance();
-  initScreen = await preferences.getInt('initScreen');
+  initScreen = preferences.getInt('initScreen');
   await preferences.setInt('initScreen', 1);
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'NBgospel',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-
-      //     ThemeData(
-      //   primarySwatch: Colors.grey,
-      // ),
-      //  home: SplashScreen(),
-
-      initialRoute:
-          initScreen == 0 || initScreen == null ? 'onboard' : 'splashScreen',
-      routes: {
-        'onboard': (_) => OnBoardingScreen(),
-        'splashScreen': (_) => splashScreen(),
-      },
+    return ChangeNotifierProvider(
+      create: (context) => ThemeModel(),
+      child: Consumer<ThemeModel>(
+        builder: (context, themeNotifier, child) {
+          return MaterialApp(
+            title: 'NBGospel',
+            debugShowCheckedModeBanner: false,
+            theme: themeNotifier.isDark ? ThemeData.dark() : ThemeData.light(),
+            initialRoute: initScreen == 0 || initScreen == null
+                ? 'onboard'
+                : 'splashScreen',
+            routes: {
+              'onboard': (_) => const OnBoardingScreen(),
+              'splashScreen': (_) => const SplashScreen(),
+            },
+          );
+        },
+      ),
     );
   }
 }
