@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nbgospel/push_notification_key.dart';
 import 'package:nbgospel/screen/on_boarding_screen.dart';
 import 'package:nbgospel/screen/splash_screen.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,7 @@ Future<void> main() async {
   NativeNotify.initialize(
       1271,
       'NPXdYp6ZFmlW3eNrb2Gfs2',
-      'AAAA7ruT1iE:APA91bEiKajZ4N-SIC_YiCdBWe1u5UANNitLhszRYuafTsfhc5BlX8T2LRKiDFor5xpehyYNsxcKEr4btoq7cs83Jo2bR_3n4Op2ntzoDAnujDx7VjVlY_ikcmGK_pBL75_INSQ8e1s7',
+      PushNotificationKey.pushNKey,
       null);
   await preferences.setInt('initScreen', 1);
 
