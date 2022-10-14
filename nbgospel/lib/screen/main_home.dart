@@ -41,6 +41,7 @@ class _MainHomeState extends State<MainHome> {
     } else {
       setState(() {
         _isSearching = false;
+        isClicked = true;
       });
     }
   }

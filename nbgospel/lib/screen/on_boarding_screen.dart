@@ -63,7 +63,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           ),
           Align(
             alignment: Alignment.bottomLeft,
-            child: FlatButton(
+            child: TextButton(
               child: const Text(
                 'Skip',
                 style: TextStyle(color: Colors.deepOrange),

@@ -67,7 +67,7 @@ class Developer extends StatelessWidget {
         child: Column(
           children: [
             Stack(
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none,
               alignment: Alignment.center,
               children: [
                 Container(

@@ -2,6 +2,13 @@ import 'package:nbgospel/model/user_model.dart';
 
 const List<UserModel> originalList = [
   UserModel(
+    pic: 'assets/nbgospel_youtube_channel1.jpg',
+    firstName: 'Follow Our',
+    lastName: 'Youtube Channel',
+    fullName: 'Follow Our Youtube Channel',
+    url: 'https://www.youtube.com/channel/UCxx6Da5GMdNJ1Okuv_F0FXg',
+  ),
+  UserModel(
     pic: 'assets/Whatsapp.jpg',
     firstName: 'Join Our',
     lastName: 'WhatsApp Group',
@@ -42,6 +49,13 @@ const List<UserModel> originalList = [
     lastName: 'Udechukwu',
     fullName: 'Apostle Edu Udechukwu',
     url: 'https://nbgospel.com/download-all-apostle-edu-udechukwu-messages/',
+  ),
+  UserModel(
+    pic: 'assets/Bishop David Abioye.jpg',
+    firstName: 'Bishop David',
+    lastName: 'Abioye',
+    fullName: 'Bishop David Abioye',
+    url: 'https://nbgospel.com/download-bishop-david-abioye-messages/',
   ),
   UserModel(
     pic: 'assets/Apostle Johnson Suleman 1.jpg',

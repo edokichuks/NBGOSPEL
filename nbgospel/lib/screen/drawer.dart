@@ -139,13 +139,13 @@ class _HomeDrawerState extends State<HomeDrawer> {
               title: const Text('Are you sure?'),
               content: const Text('Do want to exit from nbGospel?'),
               actions: [
-                FlatButton(
+                TextButton(
                   onPressed: () {
                     SystemNavigator.pop();
                   },
                   child: const Text('EXIT'),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: () {
                     Navigator.of(context).pop(false);
                   },

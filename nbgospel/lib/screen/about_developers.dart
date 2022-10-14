@@ -83,12 +83,12 @@ class _AboutDevelopersState extends State<AboutDevelopers> {
                   width: width,
                   height: height,
                   imagePath: 'assets/chuksdev1.jpg',
-                  nickName: 'chuksDev',
-                  fullName: 'Edoki Chuks',
+                  nickName: 'chuksDev💙',
+                  fullName: 'Edoki Chukwuyem',
                   title: 'Mobile App Developer',
                   location: 'Asaba, Nigeria',
                   aboutText:
-                      'More than 1+ in fundamentals of programming in C, Java, Scripting language, design concepts, version control and alots more',
+                      'More than 1 year experience in fundamentals of programming in Java, C, Scripting language, design concepts, version control systems API consumption and lots more',
                   emailLink: 'https://wa.me/qr/KDHE2Y223QWCC1',
                   facebookLink: 'https://www.facebook.com/edoki.chukwuyem',
                   linkedinLink:
